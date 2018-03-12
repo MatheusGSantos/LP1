@@ -1,28 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int main()
-{
-    double salarioB, salarioL = 0, desconto = 0;
+typedef struct{
+    char nome[30];
+    char endereco[50];
+    char matricula[10];
+    char curso[30];
+}tAluno;
 
-    printf("Informe o salario bruto: " );
-    scanf("%lf", &salarioB);
+    tAluno gAlunos[100];
 
-    if (salarioB < 420){
-        desconto = salarioB * (0.08);
-        salarioL = salarioB * (0.92);
+unsigned int consultaAlunosPorCurso(char *curso){
+    int i, count = 0;
 
-    }else if (salarioB >= 420 && salarioB < 1350){
-        desconto = salarioB * (0.09);
-        salarioL = salarioB * (0.91);
-
-    }else{
-        desconto = salarioB * (0.10);
-        salarioL = salarioB * (0.90);
-
+    for(i=0;i<100;i++){
+        if(strcmp(gAlunos[i].curso, curso) == 0)
+            count++;
     }
+    return count;
 
-    printf("Desconto: %.2lf\nSalario Liquido: %.2lf\n",desconto, salarioL);
+}
+
+int main(void){
+
+    char op[30];
+    int n;
+
+    strcpy(op, "Computacao");
+
+    strcpy(gAlunos[0].curso, "Computacao");
+    strcpy(gAlunos[1].curso, "Computacao");
+    strcpy(gAlunos[2].nome, "Fisica");
+
+    n = consultaAlunosPorCurso(op);
+
+    printf("Numero de alunos no curso: %d", n);
 
     return 0;
 }
