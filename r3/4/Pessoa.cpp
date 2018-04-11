@@ -10,7 +10,7 @@ Pessoa::Pessoa(std::string n){
 Pessoa::Pessoa(std::string n, int i, std::string t){
 	nome = n;
 	telefone = t;
-	idade = i
+	idade = i;
 }
 
 std::string Pessoa::getNome(){
@@ -19,7 +19,7 @@ std::string Pessoa::getNome(){
 std::string Pessoa::getTelefone(){
 	return telefone;
 }
-double Pessoa::getIdade(){
+int Pessoa::getIdade(){
 	return idade;
 }
 void Pessoa::setNome(std::string n){
@@ -29,7 +29,7 @@ void Pessoa::setTelefone(std::string t){
 	telefone = t;
 }
 void Pessoa::setIdade(int i){
-	idade = s;
+	idade = i;
 }
 
 Pessoa::~Pessoa(){
