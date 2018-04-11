@@ -2,7 +2,7 @@
 #include <iostream>
 
 Pessoa::Pessoa(std::string n){
-	nome = nome;
+	nome = n;
 	telefone = "n/a";
 	idade = 0;
 }
