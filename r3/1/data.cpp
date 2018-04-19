@@ -66,7 +66,7 @@ void avancarDia(int d,int m,int a)
 }
 bool data::verificarData(){
 	if ((dia <= 0) || (dia > 31))
-		return false;
+		return flse;
 	if ((mes <= 0) || (mes > 12))
 		return false;
 	if ((ano < 0) || (ano > 2018))
