@@ -6,59 +6,41 @@ using namespace std;
 
 class FiguraGeometrica
 {
-    private:
-        string nome;
     public:
         FiguraGeometrica();
-        void calcularArea();
-        string getNome();
-        void setNome(string);
-
+        FiguraGeometrica(string);
+        string nome;
+        double calcularArea();
         virtual ~FiguraGeometrica();
 
 };
 class Retangulo:public FiguraGeometrica
 {
-    private:
-        double Base;
+     public:
         double Altura;
-    public:
-        double getBase();
-        double getAltura();
-        void setBase(double);
-        void setAltura(double);
+        double Base;
+        Retangulo(double, double);
 };
 class Circulo:public FiguraGeometrica
 {
-    private:
+   public:
         double Raio;
-    public:
-        double getRaio();
-        void setRaio(double);
+        Circulo(double);
 };
 class Trapezio:public FiguraGeometrica
 {
-    private:
+   public:
         double baseMaior;
         double baseMenor;
         double Altura;
-    public:
-        double getbaseMaior();
-        double getbaseMenor();
-        double getAltura();
-        void setbaseMaior(double);
-        void setbaseMenor(double);
-        void setAltura(double);
+        Trapezio(double, double, double);
 };
 class Triangulo:public FiguraGeometrica
 {
-        private:
+    public:
         double Altura;
         double Base;
-    public:
-        double getAltura();
-        double getBase();
-        void setAltura(double);
-        void setBase(double);
+        Triangulo(double, double);
 };
-#endif // FIGURAGEOMETRICA_H
+
+#endif
