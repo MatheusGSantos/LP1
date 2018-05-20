@@ -16,7 +16,7 @@ Endereco Imovel::getEndereco(){
     return endereco;
 }
 std::string Imovel::getDescricao(){
-    return ...;
+    return descricao;
 }
 
 
